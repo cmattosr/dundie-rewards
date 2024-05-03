@@ -37,3 +37,5 @@ dundie --help
 
 ![](./assets/dundie.gif)
 
+Comentário
+- Para ativar o ambiente virtual do Python no Windows: `.\.venv\Scripts\Activate.ps1` 
