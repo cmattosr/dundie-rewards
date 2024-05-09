@@ -26,7 +26,7 @@ pip install seunome-dundie
 ```
 
 ```py
-pip install -e `.[dev]`
+pip install -e .[dev]
 ```
 
 ## Usage
@@ -39,4 +39,5 @@ dundie --help
 
 Comentário
 - Para ativar o ambiente virtual do Python no Windows: `.\.venv\Scripts\Activate.ps1` 
+- Makefile somente para fins educacionais
 
