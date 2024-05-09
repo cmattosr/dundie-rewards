@@ -1,3 +1,5 @@
+.PHONY: install virtualenv clean
+
 install:
 	@echo "installing for dev environment"
 	@.venv/Scripts/python -m pip install -e .[dev]
