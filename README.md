@@ -35,6 +35,10 @@ pip install -e .[dev]
 dundie --help
 ```
 
+```py
+dundie load .\assets\people.csv
+```
+
 ![](./assets/dundie.gif)
 
 Comentário
