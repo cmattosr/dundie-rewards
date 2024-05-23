@@ -30,9 +30,12 @@ jobs:
         run: pytest -vv tests integration
       - name: run test ci
         run: pytest -vv tests --junitxml=test-result.xml 
-      - name: publish junit results
+      - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action/windows@v2
         if: always()
         with:
-          files: test-result.xml
-          check_name: Test Result (Python ${{matrix.python-version}})
+          files: |
+            test-results\**\*.xml
+            test-results\**\*.trx
+            test-results\**\*.json
+            check_name: Test Result (Python ${{matrix.python-version}})
