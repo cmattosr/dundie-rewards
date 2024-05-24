@@ -27,9 +27,9 @@ jobs:
       - name: Install Project
         run: pip install '.[test]'
       - name: Run tests
-        run: pytest -vv tests integration
+        run: pytest -v
       - name: run test ci
-        run: pytest -vv tests --junitxml=test-result.xml 
+        run: pytest -v --junitxml=test-result.xml 
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action/windows@v2
         if: always()
