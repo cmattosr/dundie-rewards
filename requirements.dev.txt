@@ -1,4 +1,9 @@
+# dev dependencies
 ipython>=8.0.0,<=8.24.0
 ipdb
 pudb
 pytest-watch
+
+# Code Quality
+flake8
+pyproject-flake8

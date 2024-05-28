@@ -38,5 +38,3 @@ def test_load():
     assert len(out) == 3
     print(len(out))
 
-    
-test_load()

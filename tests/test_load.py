@@ -26,3 +26,4 @@ def test_load_positive_first_name_starts_with_j(request):
     with open(f"arquivo_indesejado-{uuid.uuid4()}.txt", "w") as file_:
         file_.write("dados uteis somente para o teste")
     assert load(PEOPLE_FILE)[0][0] == 'J'
+    
