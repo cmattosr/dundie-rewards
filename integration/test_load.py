@@ -1,5 +1,7 @@
 import subprocess
+
 import pytest
+
 
 def capture_command_output(command):
     """
@@ -17,13 +19,13 @@ def capture_command_output(command):
         shell=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
-        text=True
+        text=True,  # noqa
     )
     stdout, stderr = process.communicate()
 
     # Check if there were any errors
     # if stderr:
-        # print("Error:", stderr)
+    # print("Error:", stderr)
 
     # Split the output into lines and return
     return stdout.splitlines()
@@ -33,8 +35,7 @@ def capture_command_output(command):
 @pytest.mark.medium
 def test_load():
     """test command load"""
-    out = capture_command_output("dundie load .\\tests\\assets\\people.csv")            
+    out = capture_command_output("dundie load .\\tests\\assets\\people.csv")  # noqa
 
     assert len(out) == 3
     print(len(out))
-

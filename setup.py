@@ -1,6 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
+
 def read(*paths):
     """Read the contents of a text file safely.
     >>> read("dundie", "VERSION")
@@ -12,7 +13,8 @@ def read(*paths):
     filepath = os.path.join(rootpath, *paths)
     with open(filepath) as file_:
         return file_.read().strip()
-    
+
+
 def read_requirements(path):
     """Return a list of requirements from a text file."""
     return [
@@ -21,15 +23,16 @@ def read_requirements(path):
         if not line.startswith(("#", "git+", '"', "-"))
     ]
 
+
 setup(
     name="dundie",
-    version="0.1.0", # semantic versioning
+    version="0.1.0",  # semantic versioning
     description="Reward Point System for Dunder Mifflin",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     author="Cesar Rocha",
     python_requires=">=3.10",
-    packages=find_packages(),   
+    packages=find_packages(),
     entry_points={
         "console_scripts": [
             "dundie=dundie.__main__:main"
